@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Calc</title>
+</head>
+
+<body>
+    <div class="topo">
+        <div class="custovar">
+            <label for="">Total Custo Variavel</label>
+            <input id="variaveltopo" type="text" disabled="true">
+        </div>
+
+        <div class="margem">
+            <label for="">Total Margem Contribuição</label>
+            <input id="margemcontribuicao" type="text" disabled="true">        
+        </div>
+
+        <div class="custofixo">
+            <label for="">Total Custo Fixo</label>
+            <input id="totalfixo" type="text" disabled="true">
+        </div>
+
+        <div>
+            <label for="">% de Lucro Desejado</label>
+            <input id="totaldesejado" type="text" disabled="true">
+        </div>
+
+       <div>
+            <label for="">P.Eq. Sem Lucro</label>
+            <input id="eqsemlucro" type="text" disabled="true">
+        </div>
+
+        <div>
+            <label for="">P.Eq. Com Lucro</label>
+            <input id="eqcomlucro" type="text" disabled="true"> 
+        </div>
+       
+       <div>         
+            <label for="">P.Eq. Comercial</label>
+            <input id='eqcomercial' type="text" disabled="true">
+       </div>      
+
+    </div>
+
+    <div class="primeiraparte">
+        <div class="atividade">
+            <button class="buttoncusto" onclick="umreal()">Comercio</a>
+            <button class="buttonvenda" onclick="aberto()">Serviço</a>
+        </div>
+
+        <div class="calculo01">
+            <h3>Cálculo de CMV</h3>
+            <label for="">custo produto/serviço</label>
+            <input id="custo" type="text" value="" placeholder="Informe preço Custo do Serviço">
+
+            <label for="">Preço de venda produto/serviço</label>
+            <input id="venda" type="text" value="" placeholder="Informe preço de Venda">
+
+            <button id="calc" onclick="calccmv()">Calcular CMV</button>
+
+            <label for="resultado">Resultado CMV</label><input id="resultado" type="text" disabled="true">
+        </div>
+    </div>
+
+    <div class="segundaparte">
+        <h3>Custo Variável</h3>
+
+        <div>
+            <label for="">Aliq Imposto</label>
+            <input id="imposto" type="text" value="" placeholder="Informe a Aliquota do Imposto">
+        </div>
+
+        <div>
+            <label for="">Aliq Comissão</label>
+            <input id="comissao" type="text" value="" placeholder="Informe a porcetagem de comissão">
+        </div>
+
+        <div>
+            <label for="">Aliq Garcom</label>
+            <input id="garcom" type="text" value="" placeholder="Informe a porcentagem para o garçom">
+        </div>
+
+        <div>
+            <label for="">Porcentagem de Lucro Desejado</label>
+            <input id="lucrodesejado" type="text" placeholder="Informe Porcentagem de Lucro Desejado">
+       </div>
+
+       <div>
+            <label for="">Total Custo Variavel</label>
+            <input id="totalcustovar" type="text" value="" placeholder="TotalCusto Variavel" disabled="true">
+       </div>
+       
+       <button id="resultmargem" onclick="calcmargem()">Calcular Custo Variavel %</button>        
+        
+    </div>
+
+    <div class="terceiraparte">
+        <h3>Custo Fixo</h3>
+        <label for="">Aluguel</label>
+        <input id="aluguel" type="text" value="" placeholder="Aluguel">
+
+        <label for="">Luz</label>
+        <input id="luz" type="text" placeholder="Energia / Luz">
+
+        <label for="">Agua</label>
+        <input id="agua" type="text" placeholder="Agua">
+
+        <label for="">Contabilidade</label>
+        <input id="contabilidade" type="text" placeholder="Contabilidade">
+
+        <label for="">Mat. de Copa</label>
+        <input id="materialcopa" type="text" placeholder="Material de Copa (Açucar, Café)">
+
+        <label for="">software</label>
+        <input id="software" type="text" placeholder="Sistema / software">
+
+        <label for="">Material de Limpeza</label>
+        <input id="materiallimpeza" type="text" placeholder="Material Limpeza">
+
+        <label for="">Salário</label>
+        <input id="salarios" type="text" placeholder="Salario">
+
+        <label for="">Encargos</label>
+        <input id="encargos" type="text" placeholder="Encargos Trabalhistas entra automátio" disabled="true">
+            <button id="butenc" onclick="encarg()">calcular encargos</button>
+
+
+
+        <label for="beneficios">Beneficios Colaboradores</label>
+        <input id="beneficios" type="text" placeholder="Beneficios">
+
+        <label for="grafica">Grafica</label>
+        <input id="grafica" type="text" placeholder="Material Gráfico">
+
+        <label for="internet">Internet</label>
+        <input id="internet" type="text" placeholder="Internet">
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" type="text" placeholder="Telefone">
+
+        <label for="outras">Outras Despesas</label>
+        <input id="outras" type="text" placeholder="Outras Despesas não especificado">
+
+        <button id="final" onclick="finalcalc()">Calcular Ponto Equilibrio</button>
+
+       
+      
+
+
+    </div>
+</body>
+
+</html>
