@@ -1,160 +1,252 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js"></script>
-    <title>Ponto Equilibrio</title>
-</head>
+    <title>Calc</title>
+  </head>
 
-<body>
-    <div class="topo">
-        <div class="custovar">
-            <label for="">Total Custo Variavel</label>
-            <input id="variaveltopo" type="text" disabled="true">
-        </div>
+  <body>
+    <header>
+      <div class="header">
+        <label for="">Total Custo Variavel</label>
+        <input id="variaveltopo" type="text" disabled="true" />
+      </div>
 
-        <div class="margem">
-            <label for="">Total Margem Contribuição</label>
-            <input id="margemcontribuicao" type="text" disabled="true">        
-        </div>
+      <div class="header">
+        <label for="">Total Margem Contribuição</label>
+        <input id="margemcontribuicao" type="text" disabled="true" />
+      </div>
 
-        <div class="custofixo">
-            <label for="">Total Custo Fixo</label>
-            <input id="totalfixo" type="text" disabled="true">
-        </div>
+      <div class="header">
+        <label for="">Total Custo Fixo</label>
+        <input id="totalfixo" type="text" disabled="true" />
+      </div>
 
-        <div>
-            <label for="">% de Lucro Desejado</label>
-            <input id="totaldesejado" type="text" disabled="true">
-        </div>
+      <div class="header">
+        <label for="">% de Lucro Desejado</label>
+        <input id="totaldesejado" type="text" disabled="true" />
+      </div>
 
-       <div>
-            <label for="">P.Eq. Sem Lucro</label>
-            <input id="eqsemlucro" type="text" disabled="true">
-        </div>
+      <div class="header">
+        <label for="">P.Eq. Sem Lucro</label>
+        <input id="eqsemlucro" type="text" disabled="true" />
+      </div>
 
-        <div>
-            <label for="">P.Eq. Com Lucro</label>
-            <input id="eqcomlucro" type="text" disabled="true"> 
-        </div>
-       
-       <div>         
-            <label for="">P.Eq. Comercial</label>
-            <input id='eqcomercial' type="text" disabled="true">
-       </div>      
+      <div class="header">
+        <label for="">P.Eq. Com Lucro</label>
+        <input id="eqcomlucro" type="text" disabled="true" />
+      </div>
 
-    </div>
+      <div class="header">
+        <label for="">P.Eq. Comercial</label>
+        <input id="eqcomercial" type="text" disabled="true" />
+      </div>
+    </header>
 
-    <div class="primeiraparte">
+    <section>
+      <div class="box">
         <div class="atividade">
-            <button class="buttoncusto" onclick="umreal()">Comercio</a>
-            <button class="buttonvenda" onclick="aberto()">Serviço</a>
+          <button onclick="umreal()">Comercio</button>
+          <button onclick="aberto()">Serviço</button>
         </div>
 
-        <div class="calculo01">
-            <h3>Cálculo de CMV</h3>
+        <h3>Cálculo de CMV</h3>
+        <div class="box-tab">
+          <div class="tab">
             <label for="">custo produto/serviço</label>
-            <input id="custo" type="text" value="" placeholder="Informe preço Custo do Serviço">
+            <br />
+            <input
+              id="custo"
+              type="text"
+              value=""
+              placeholder="Informe preço Custo do Serviço"
+            />
+          </div>
 
+          <div class="tab">
             <label for="">Preço de venda produto/serviço</label>
-            <input id="venda" type="text" value="" placeholder="Informe preço de Venda">
+            <br />
+            <input
+              id="venda"
+              type="text"
+              value=""
+              placeholder="Informe preço de Venda"
+            />
+          </div>
 
+          <div>
             <button id="calc" onclick="calccmv()">Calcular CMV</button>
+          </div>
 
-            <label for="resultado">Resultado CMV</label><input id="resultado" type="text" disabled="true">
+          <div class="tab">
+            <label for="resultado">Resultado CMV</label>
+            <br />
+            <input id="resultado" type="text" disabled="true" />
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="segundaparte">
+      <div class="box">
         <h3>Custo Variável</h3>
 
-        <div>
+        <div class="box-tab">
+          <div class="tab">
             <label for="">Aliq Imposto</label>
-            <input id="imposto" type="text" value="" placeholder="Informe a Aliquota do Imposto">
-        </div>
+            <input
+              id="imposto"
+              type="text"
+              value=""
+              placeholder="Informe a Aliquota do Imposto"
+            />
+          </div>
 
-        <div>
+          <div class="tab">
             <label for="">Aliq Comissão</label>
-            <input id="comissao" type="text" value="" placeholder="Informe a porcetagem de comissão">
-        </div>
+            <input
+              id="comissao"
+              type="text"
+              value=""
+              placeholder="Informe a porcetagem de comissão"
+            />
+          </div>
 
-        <div>
+          <div class="tab">
             <label for="">Aliq Garcom</label>
-            <input id="garcom" type="text" value="" placeholder="Informe a porcentagem para o garçom">
+            <input
+              id="garcom"
+              type="text"
+              value=""
+              placeholder="Informe a porcentagem para o garçom"
+            />
+          </div>
+
+          <div class="tab">
+            <label for="">Porcentagem de Lucro Desejado</label>
+            <input
+              id="lucrodesejado"
+              type="text"
+              placeholder="Informe Porcentagem de Lucro Desejado"
+            />
+          </div>
+
+          <div class="tab">
+            <label for="">Total Custo Variavel</label>
+            <input
+              id="totalcustovar"
+              type="text"
+              value=""
+              placeholder="TotalCusto Variavel"
+              disabled="true"
+            />
+          </div>
+        </div>
+
+        <button id="resultmargem" onclick="calcmargem()">
+          Calcular Custo Variavel %
+        </button>
+      </div>
+
+      <div class="box">
+        <h3>Custo Fixo</h3>
+
+        <div class="box-tab">
+          <div class="tab">
+            <label for="">Aluguel</label>
+            <input id="aluguel" type="text" value="" placeholder="Aluguel" />
+          </div>
+
+          <div class="tab">
+            <label for="">Luz</label>
+            <input id="luz" type="text" placeholder="Energia / Luz" />
+          </div>
+          <div class="tab">
+            <label for="">Agua</label>
+            <input id="agua" type="text" placeholder="Agua" />
+          </div>
+
+          <div class="tab">
+            <label for="">Contabilidade</label>
+            <input id="contabilidade" type="text" placeholder="Contabilidade" />
+          </div>
+        </div>
+
+        <div class="box-tab">
+          <div class="tab">
+            <label for="">Mat. de Copa</label>
+            <input
+              id="materialcopa"
+              type="text"
+              placeholder="Material de Copa (Açucar, Café)"
+            />
+          </div>
+          <div class="tab">
+            <label for="">software</label>
+            <input id="software" type="text" placeholder="Sistema / software" />
+          </div>
+
+          <div class="tab">
+            <label for="">Material de Limpeza</label>
+            <input
+              id="materiallimpeza"
+              type="text"
+              placeholder="Material Limpeza"
+            />
+          </div>
+
+          <div class="tab">
+            <label for="">Salário</label>
+            <input id="salarios" type="text" placeholder="Salario" />
+          </div>
+          <div class="tab">
+            <label for="">Encargos</label>
+            <input
+              id="encargos"
+              type="text"
+              placeholder="Encargos Trabalhistas entra automátio"
+              disabled="true"
+            />
+          </div>
         </div>
 
         <div>
-            <label for="">Porcentagem de Lucro Desejado</label>
-            <input id="lucrodesejado" type="text" placeholder="Informe Porcentagem de Lucro Desejado">
-       </div>
+          <button id="butenc" onclick="encarg()">calcular encargos</button>
+        </div>
+        <div class="box-tab">
+          <div class="tab">
+            <label for="beneficios">Beneficios Colaboradores</label>
+            <input id="beneficios" type="text" placeholder="Beneficios" />
+          </div>
 
-       <div>
-            <label for="">Total Custo Variavel</label>
-            <input id="totalcustovar" type="text" value="" placeholder="TotalCusto Variavel" disabled="true">
-       </div>
-       
-       <button id="resultmargem" onclick="calcmargem()">Calcular Custo Variavel %</button>        
-        
-    </div>
+          <div class="tab">
+            <label for="grafica">Grafica</label>
+            <input id="grafica" type="text" placeholder="Material Gráfico" />
+          </div>
+          <div class="tab">
+            <label for="internet">Internet</label>
+            <input id="internet" type="text" placeholder="Internet" />
+          </div>
+          <div class="tab">
+            <label for="telefone">Telefone</label>
+            <input id="telefone" type="text" placeholder="Telefone" />
+          </div>
+          <div class="tab">
+            <label for="outras">Outras Despesas</label>
+            <input
+              id="outras"
+              type="text"
+              placeholder="Outras Despesas não especificado"
+            />
+          </div>
+        </div>
 
-    <div class="terceiraparte">
-        <h3>Custo Fixo</h3>
-        <label for="">Aluguel</label>
-        <input id="aluguel" type="text" value="" placeholder="Aluguel">
-
-        <label for="">Luz</label>
-        <input id="luz" type="text" placeholder="Energia / Luz">
-
-        <label for="">Agua</label>
-        <input id="agua" type="text" placeholder="Agua">
-
-        <label for="">Contabilidade</label>
-        <input id="contabilidade" type="text" placeholder="Contabilidade">
-
-        <label for="">Mat. de Copa</label>
-        <input id="materialcopa" type="text" placeholder="Material de Copa (Açucar, Café)">
-
-        <label for="">software</label>
-        <input id="software" type="text" placeholder="Sistema / software">
-
-        <label for="">Material de Limpeza</label>
-        <input id="materiallimpeza" type="text" placeholder="Material Limpeza">
-
-        <label for="">Salário</label>
-        <input id="salarios" type="text" placeholder="Salario">
-
-        <label for="">Encargos</label>
-        <input id="encargos" type="text" placeholder="Encargos Trabalhistas entra automátio" disabled="true">
-            <button id="butenc" onclick="encarg()">calcular encargos</button>
-
-
-
-        <label for="beneficios">Beneficios Colaboradores</label>
-        <input id="beneficios" type="text" placeholder="Beneficios">
-
-        <label for="grafica">Grafica</label>
-        <input id="grafica" type="text" placeholder="Material Gráfico">
-
-        <label for="internet">Internet</label>
-        <input id="internet" type="text" placeholder="Internet">
-
-        <label for="telefone">Telefone</label>
-        <input id="telefone" type="text" placeholder="Telefone">
-
-        <label for="outras">Outras Despesas</label>
-        <input id="outras" type="text" placeholder="Outras Despesas não especificado">
-
-        <button id="final" onclick="finalcalc()">Calcular Ponto Equilibrio</button>
-
-       
-      
-
-
-    </div>
-</body>
-
+        <button id="final" onclick="finalcalc()">
+          Calcular Ponto Equilibrio
+        </button>
+      </div>
+    </section>
+  </body>
 </html>
